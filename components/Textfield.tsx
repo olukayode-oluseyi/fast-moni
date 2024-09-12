@@ -10,7 +10,7 @@ import {
 } from "react-native";
 
 interface TextFieldProps extends TextInputProps {
-  control: Control<FieldValues>;
+  control?: any;
   errors: any;
   name: string;
   label?: string;

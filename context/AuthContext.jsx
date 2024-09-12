@@ -30,8 +30,9 @@ export const AuthProvider = ({ children }) => {
     }
   }
 
+
   const login = async (data) => {
-  console.log(data)
+
     AsyncStorage.setItem("isUserSignedIn", JSON.stringify(true));
     await SecureStore.setItemAsync("token", JSON.stringify(data.token));
     setIsLoggedIn(true);
@@ -42,7 +43,7 @@ export const AuthProvider = ({ children }) => {
     let keys = [
         "isUserSignedIn",
       ];
-     await AsyncStorage.multiRemove(keys, (err) => {});
+    await AsyncStorage.multiRemove(keys, (err) => {});
     await SecureStore.deleteItemAsync("token");
     setIsLoggedIn(false);
   };

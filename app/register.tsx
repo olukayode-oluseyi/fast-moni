@@ -44,7 +44,7 @@ const register = () => {
     },
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = (data: any) => {
     mutate({
       name: "morpheus",
       job: "leader",

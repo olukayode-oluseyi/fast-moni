@@ -21,22 +21,23 @@ export default function HomeScreen() {
   const { user, isLoadingUser } = useUser();
 
   if (isLoadingUser) {
-    return <View
-      style={{
-        justifyContent: 'center',
-        alignItems: 'center',
-        flex: 1,
-      }}
-    >
-      <ActivityIndicator />
-    </View>;
+    return (
+      <View
+        style={{
+          justifyContent: "center",
+          alignItems: "center",
+          flex: 1,
+        }}
+      >
+        <ActivityIndicator />
+      </View>
+    );
   }
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: "#A1CEDC", dark: "#1D3D47" }}
     >
       <ThemedView style={styles.titleContainer}>
-      
         <ThemedText type="title">
           Welcome! {user?.first_name} {user?.last_name}
         </ThemedText>
@@ -52,7 +53,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     gap: 8,
-  
   },
   stepContainer: {
     gap: 8,

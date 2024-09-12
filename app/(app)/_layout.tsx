@@ -34,19 +34,14 @@ export default function RootLayout() {
     return null;
   }
 
-
- 
   if (!isLoggedIn) {
     return <Redirect href={"signin"} />;
   }
- 
 
   return (
     <Stack
-  
       screenOptions={{
         headerShown: false,
-        
       }}
     />
   );

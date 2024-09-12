@@ -10,7 +10,7 @@ import { loginSchema } from "@/schemas/Auth";
 import { useMutation, useQuery } from "react-query";
 import axios from "axios";
 
-const loginFn = (data) => {
+const loginFn = (data: any) => {
   return axios
     .post(`${process.env.EXPO_PUBLIC_API_BASE_URL}/login`, {
       email: "eve.holt@reqres.in",
@@ -43,7 +43,7 @@ export default function login() {
     },
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = (data: any) => {
     mutate(data);
   };
 
